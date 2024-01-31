@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4강</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id=alert class="alert-box">
+        <p id='text'>알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+    <button class='button'>버튼1</button>
+    <button class='button'>버튼2</button>
+
+    <script>
+
+        document.getElementsByClassName('button')[0].addEventListener('mouseover', function () {
+            document.getElementsByClassName('alert-box')[0].style.display = 'block';
+            document.getElementById('text').innerHTML = 'id를 입력하세요';
+        });
+        document.getElementsByClassName('button')[1].addEventListener('mouseover', function () {
+            document.getElementsByClassName('alert-box')[0].style.display = 'block';
+            document.getElementById('text').innerHTML = 'pw를 입력하세요';
+        });
+
+
+
+        document.getElementById('close').addEventListener('click', function () {
+            document.getElementById('alert').style.display = 'none'
+        });
+
+
+    </script>
+</body>
+
+</html>
